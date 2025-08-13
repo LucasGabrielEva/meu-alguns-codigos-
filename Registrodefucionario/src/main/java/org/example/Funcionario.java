@@ -52,7 +52,7 @@ public class Funcionario {
                     } else {
                         String hora = LocalTime.now().format(formatoHora);
                         chegada.set(idxChegada, hora);
-                        System.out.println("✅ Chegada registrada: " +
+                        System.out.println(" Chegada registrada: " +
                                 funcionarios.get(idxChegada) + " às " + hora);
                     }
                     break;
@@ -70,13 +70,13 @@ public class Funcionario {
                     } else {
                         String hora = LocalTime.now().format(formatoHora);
                         saida.set(idxSaida, hora);
-                        System.out.println("✅ Saída registrada: " +
+                        System.out.println(" Saída registrada: " +
                                 funcionarios.get(idxSaida) + " às " + hora);
                     }
                     break;
 
                 case "3": // Relatório
-                    System.out.println("\n📄 RELATÓRIO DO DIA:");
+                    System.out.println("\n RELATÓRIO DO DIA:");
                     for (int i = 0; i < funcionarios.size(); i++) {
                         String horaChegada = (chegada.get(i) != null) ? chegada.get(i) : "—";
                         String horaSaida = (saida.get(i) != null) ? saida.get(i) : "—";
@@ -120,6 +120,7 @@ public class Funcionario {
         }
     }
 }
+
 
 
 
